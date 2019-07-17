@@ -1,0 +1,71 @@
+------------------------------------------------------------
+  Plugin list generated with BackWPup version: 3.6.10
+  http://backwpup.com
+  Blog Name: Clear Cut Tree
+  Blog URL: https://www.clearcuttree.com
+  Generated on: 2019-07-17 15:26.45
+------------------------------------------------------------
+
+
+All plugin information:
+------------------------------
+Advanced Custom Fields PRO (v.5.7.10) from Elliot Condon
+	https://www.advancedcustomfields.com/
+BackWPup (v.3.6.10) from Inpsyde GmbH
+	http://backwpup.com
+Contact Form 7 (v.5.0.1) from Takayuki Miyoshi
+	https://contactform7.com/
+Duplicator (v.1.3.16) from Snap Creek
+	https://snapcreek.com/duplicator/duplicator-free/
+Flamingo (v.1.8) from Takayuki Miyoshi
+	
+Google Analytics for WordPress by MonsterInsights (v.7.0.6) from MonsterInsights
+	https://www.monsterinsights.com/?utm_source=wordpress&utm_medium=plugin&utm_campaign=wpmipluginpro&utm_content=v700
+Gravity Forms (v.2.1.2) from rocketgenius
+	http://www.gravityforms.com
+Gravity Forms Zero Spam (v.1.0.3) from GoWP
+	http://www.gowp.com/plugins/gravityforms-zero-spam
+Hello Dolly (v.1.7) from Matt Mullenweg
+	http://wordpress.org/plugins/hello-dolly/
+NextGEN Gallery (v.3.0.1) from Imagely
+	https://www.imagely.com/wordpress-gallery-plugin/nextgen-gallery/
+Popup Maker (v.1.7.24) from WP Popup Maker
+	https://wppopupmaker.com/?utm_campaign=PluginInfo&utm_source=plugin-header&utm_medium=plugin-uri
+Redirection (v.3.2) from John Godley
+	https://redirection.me/
+Replace Image (v.1.1.6) from Potent Plugins
+	
+Responsive Lightbox & Gallery (v.2.1.0) from dFactory
+	http://www.dfactory.eu/plugins/responsive-lightbox/
+Strong Testimonials (v.2.27.2) from Chris Dillon
+	https://strongplugins.com/plugins/strong-testimonials/
+The SEO Framework (v.3.0.6) from Sybre Waaijer
+	https://theseoframework.com/
+WordPress HTTPS (v.3.4.0) from Mike Ems
+	http://mvied.com/projects/wordpress-https/
+WP Fail2Ban Redux (v.0.4.0) from Brandon Allen
+	https://github.com/thebrandonallen/wp-fail2ban-redux/
+
+Active plugins:
+------------------------------
+Advanced Custom Fields PRO
+BackWPup
+Contact Form 7
+Duplicator
+Flamingo
+Google Analytics for WordPress by MonsterInsights
+Gravity Forms
+Gravity Forms Zero Spam
+NextGEN Gallery
+Popup Maker
+Redirection
+Replace Image
+Responsive Lightbox & Gallery
+Strong Testimonials
+The SEO Framework
+WordPress HTTPS
+
+Inactive plugins:
+------------------------------
+Hello Dolly
+WP Fail2Ban Redux
