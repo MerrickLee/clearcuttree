@@ -1,7 +1,7 @@
 <?php
 
 # The name of the database for WordPress
-define('DB_NAME', 'clearcuttree');
+define('DB_NAME', 'clearcuttree1');
 
 # MySQL database username
 define('DB_USER', 'clearcuttree');
