@@ -1,99 +1,92 @@
 <?php
+/**
+ * The base configuration for WordPress
+ *
+ * The wp-config.php creation script uses this file during the
+ * installation. You don't have to use the web site, you can
+ * copy this file to "wp-config.php" and fill in the values.
+ *
+ * This file contains the following configurations:
+ *
+ * * MySQL settings
+ * * Secret keys
+ * * Database table prefix
+ * * ABSPATH
+ *
+ * @link https://codex.wordpress.org/Editing_wp-config.php
+ *
+ * @package WordPress
+ */
 
-# The name of the database for WordPress
-define('DB_NAME', 'clearcuttree');
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+//define( 'DB_NAME', 'clearcuttree1' );
+//define( 'DB_NAME', 'clearcutdrop' );
+define( 'DB_NAME', 'clearcutnext' );
 
-# MySQL database username
-define('DB_USER', 'clearcuttree');
+/** MySQL database username */
+define( 'DB_USER', 'admin' );
 
-# MySQL database password
-define('DB_PASSWORD', 'clearcuttree1');
+/** MySQL database password */
+define( 'DB_PASSWORD', 'clearcuttree1' );
 
-# MySQL hostname
-define('DB_HOST', 'clearcuttree.cgi42myq6vvf.us-east-2.rds.amazonaws.com');
+/** MySQL hostname */
+define( 'DB_HOST', 'clearcuttree1.cgi42myq6vvf.us-east-2.rds.amazonaws.com' );
 
-# Database Charset to use in creating database tables.
-define('DB_CHARSET', 'utf8mb4');
+/** Database Charset to use in creating database tables. */
+define( 'DB_CHARSET', 'utf8mb4' );
 
-# The Database Collate type. Don't change this if in doubt.
-define('DB_COLLATE', '');
+/** The Database Collate type. Don't change this if in doubt. */
+define( 'DB_COLLATE', '' );
 
-define('AUTH_KEY',         'V_f~*,-:z$Bu{ayWI4SrK;g#0e3[PG%xl(v)<|OqZTh2J9NC5n7.^&sci`+8E]@?');
-define('SECURE_AUTH_KEY',  'MKo~972mJ_1C<;XN ZUq.LQgasxlRIS:pD}d!v&^rWBw[+$),=@0A|Vi3`(hjT]*');
-define('LOGGED_IN_KEY',    'vjUEmGb *)w!Z?f`d%z<7&94C0N+plJ[a>g#VDB$Qe6F}rkTK^1cuMX;Ox-n~/5=');
-define('NONCE_KEY',        'h1OqE|(c?}4*UMXbgyLC9s7B3jFZK[Dk=YH!R& vJPW`8~+mIl_r0:#-,6]uaS$.');
-define('AUTH_SALT',        '0~h%(KqkEzQ>MD]B6*V$g9G2fviFPR<7t)Z3`pl^uxyNdb8 C;,&+-!.jT=r4YAs');
-define('SECURE_AUTH_SALT', 'H=L>&GT2gBi4q?h<*uF}eP3Dpw:Y,)s#bfz@0E[.JXUKNx-kCvM68(ZO^WRcaS`I');
-define('LOGGED_IN_SALT',   'GNv20D>uO;IhRdm{3x*9Mac^fy-4XQBTW1JlkE:$@6H.St,)|swq[F%&#+gZVj `');
-define('NONCE_SALT',       'W)A,m3lKd~+Vx;Z}au/Po:9rb6FO>yt!7vBn_D-U|QL %(8ecJCST`MsG$i=@N2p');
+/**#@+
+ * Authentication Unique Keys and Salts.
+ *
+ * Change these to different unique phrases!
+ * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
+ * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
+ *
+ * @since 2.6.0
+ */
+define( 'AUTH_KEY',         'grNIJ4o08iqI5WZi1IL9C!v)/l8]L7M86I6[,E(@qNS<8&;H~{<%?MDEPZXa,_<D' );
+define( 'SECURE_AUTH_KEY',  'Rc$T4k//1st{ti/u1dpAE|Ru,6P0,,n_}=YhUD6Jct&zTfP_.de)uQ-zF`k4lK&L' );
+define( 'LOGGED_IN_KEY',    '.|0-Z:u96!Mx.]wRvfWFH>$SoHmS/Lm<mGFnt6Nyf]j#GMH*;yX^YtC>9r-G}>ug' );
+define( 'NONCE_KEY',        '2YzWKB<vl&PIi(F*3Hm6r(Mj$*,lc05H<fRoO1)ZXHoW-ds17bg?4?Pkun<P(]v7' );
+define( 'AUTH_SALT',        'J:G,S!qM ,mJ:0,kG@S#fgX GVBJ<#GhU)Z%DHRMuAE,]=kn#DwG-$T<Nar7?@U7' );
+define( 'SECURE_AUTH_SALT', '?6&I-@)=4$}X6[CG7gkeOrEIR,ZQ~.:P[xt,9nwy{*.?G4ALz>6/Xo1d3g^4i.V9' );
+define( 'LOGGED_IN_SALT',   ',&*{9+=4#R!jdGS&;AL;)sZ?hSxRy7./#v=|O&((V$jBY%W#MEJKo^IfgG|(wbGo' );
+define( 'NONCE_SALT',       'GSjw$/kCtrq*!buNg.Us<|Tu[nN5pA_mh)Tp(egLAZ;hQk#{1N>r8Jzl3g!&w(hs' );
 
+/**#@-*/
+
+/**
+ * WordPress Database Table prefix.
+ *
+ * You can have multiple installations in one database if you give each
+ * a unique prefix. Only numbers, letters, and underscores please!
+ */
 $table_prefix = 'wp_';
 
-# Make sure we're running from a web server environment and not CLI
-if ( http_response_code() !== FALSE ) {
-    $primary_domain = $_SERVER['HTTP_HOST'];
+/**
+ * For developers: WordPress debugging mode.
+ *
+ * Change this to true to enable the display of notices during development.
+ * It is strongly recommended that plugin and theme developers use WP_DEBUG
+ * in their development environments.
+ *
+ * For information on other constants that can be used for debugging,
+ * visit the Codex.
+ *
+ * @link https://codex.wordpress.org/Debugging_in_WordPress
+ */
+define( 'WP_DEBUG', false );
 
-    # Default HTTP scheme to use
-    $site_scheme = 'http';
-
-    // Prevent redirect loops when using a reverse proxy and https:
-    // https://codex.wordpress.org/Administration_Over_SSL#Using_a_Reverse_Proxy
-    //
-    // In some setups HTTP_X_FORWARDED_PROTO might contain 
-    // a comma-separated list e.g. http,https
-    // so check for https existence
-    if (strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false) {
-        define('FORCE_SSL_ADMIN', true);
-        define('FORCE_SSL_LOGIN', true);
-        $_SERVER['HTTPS']='on';
-        $site_scheme = 'https';
-    }
-
-    $site_url = $site_scheme . '://' . $primary_domain;
-
-
-    define('WP_HOME', $site_url);
-    define('WP_SITEURL', $site_url);
-}
-
-# The WP_CACHE setting, if true, includes the wp-content/advanced-cache.php
-# script, when executing wp-settings.php.
-define('WP_CACHE', false);
-
-
-#  Disable all automatic updates:
-define('AUTOMATIC_UPDATER_DISABLED', true);
-
-# Disable the cron entirely by setting DISABLE_WP_CRON to true.
-define('DISABLE_WP_CRON', false);
-
-# This will block users being able to use the plugin and theme
-# installation/update functionality from the WordPress admin area. Setting this
-# constant also disables the Plugin and Theme editor (i.e. you don't need to set
-# DISALLOW_FILE_MODS and DISALLOW_FILE_EDIT, as on its own DISALLOW_FILE_MODS
-# will have the same effect).
-define('DISALLOW_FILE_MODS', false);
-
-# Occasionally you may wish to disable the plugin or theme editor to prevent
-# overzealous users from being able to edit sensitive files and potentially
-# crash the site. Disabling these also provides an additional layer of security
-# if a hacker gains access to a well-privileged user account.
-define('DISALLOW_FILE_EDIT', false);
-
-# The WP_DEBUG option, added in WordPress Version 2.3.1, controls the reporting
-# of some errors and warnings and enables use of the WP_DEBUG_DISPLAY and
-# WP_DEBUG_LOG settings. The default value is false.
-define('WP_DEBUG', false);
-if ( WP_DEBUG ) {
-    define('WP_DEBUG_LOG', false);
-    define('WP_DEBUG_DISPLAY', true);
-}
-
-/* That's all, stop editing! Happy blogging. */
+/* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
-if ( !defined('ABSPATH') )
-        define('ABSPATH', dirname(__FILE__) . '/');
+if ( ! defined( 'ABSPATH' ) ) {
+	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
+}
 
 /** Sets up WordPress vars and included files. */
-require_once(ABSPATH . 'wp-settings.php');
+require_once( ABSPATH . 'wp-settings.php' );
